@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- lts/*
+cache:
+  directories:
+  - "${TRAVIS_BUILD_DIR}/node_modules"
+git:
+  depth: 1
+install:
+  - npm install --ignore-scripts
+script:
+  - npm test
